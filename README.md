@@ -3,3 +3,9 @@ Map of Texas made to aid Texas Equestrian Trail Riders Association (TETRA) keep 
 Tools used: 
 - Google Maps API - used to create overlays for each riding region and place markers representing the riding locations on the map 
 - Google Fusion Tables - used to get Texas county data
+
+Check out the TETRA website:
+http://tetra.memberlodge.org/
+
+Check out the data used for map generation:
+https://fusiontables.google.com/data?docid=1CBnM-DtfLMdrPb91U-3XrN38GeqgMHFQKV1vnOkS
