@@ -1,17 +1,15 @@
 <!DOCTYPE html>
+<!-- This file is testing the capabilities of the Google Maps API -->
 <html>
   <head>
     <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map {
         height: 68%;
         width: 50%;
       }
-      /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
         margin: 0;
@@ -21,6 +19,7 @@
   </head>
   <body>
     <div id="map"></div>
+<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2+from+1CBnM-DtfLMdrPb91U-3XrN38GeqgMHFQKV1vnOkS&amp;viz=MAP&amp;h=false&amp;lat=31.915119508876778&amp;lng=-98.21728437056743&amp;t=1&amp;z=6&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
     <script>
       var map;
       function initMap() {
@@ -35,19 +34,43 @@
     },
     styles: [{
       polygonOptions: {
-        fillColor: '#1ABC9C',
+        fillColor: '#e6194b',
         fillOpacity: 0.3
       }
     }, {
       where: "'Region' >= 2",
       polygonOptions: {
-        fillColor: '#2980B9',
+        fillColor: '#3cb44b',
         fillOpacity: 0.3
       }
     }, {
       where: "'Region' >= 3",
       polygonOptions: {
-        fillColor: '#D68910',
+        fillColor: '#ffe119',
+        fillOpacity: 0.3
+      }
+    }, {
+      where: "'Region' >= 4",
+      polygonOptions: {
+        fillColor: '#0082c8',
+        fillOpacity: 0.3
+      }
+    }, {
+      where: "'Region' >= 5",
+      polygonOptions: {
+        fillColor: '#f58231',
+        fillOpacity: 0.3
+      }
+    }, {
+      where: "'Region' >= 6",
+      polygonOptions: {
+        fillColor: '#911eb4',
+        fillOpacity: 0.3
+      }
+    }, {
+      where: "'Region' >= 7",
+      polygonOptions: {
+        fillColor: '#46f0f0',   
         fillOpacity: 0.3
       }
     }]
@@ -59,3 +82,4 @@
     async defer></script>
   </body>
 </html>
+
