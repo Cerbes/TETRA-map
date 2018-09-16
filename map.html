@@ -6,10 +6,10 @@
 <title>TETRA Regions Map</title>
 <style type="text/css">
 html, body, #googft-mapCanvas {
-  height: 300px;
+  height: 600px;
   margin: 0;
   padding: 0;
-  width: 500px;
+  width: 900px;
 }
 </style>
 
@@ -24,12 +24,32 @@ html, body, #googft-mapCanvas {
       viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
     }
     var mapDiv = document.getElementById('googft-mapCanvas');
-    mapDiv.style.width = isMobile ? '100%' : '500px';
-    mapDiv.style.height = isMobile ? '100%' : '300px';
+    mapDiv.style.width = isMobile ? '100%' : '900px';
+    mapDiv.style.height = isMobile ? '100%' : '900px';
     var map = new google.maps.Map(mapDiv, {
       center: new google.maps.LatLng(31.215119508876778, -100.21728437056743),
-      zoom: 5,
+      zoom: 6,
       mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Willow Grey Ranch</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Willow Grey Ranch</b>, on the shores of Lake Ray Roberts, is a home to horses, dogs, cats, and ducks.</p>'+
+            '</div>'+
+            '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+          content: contentString
+    });
+    var marker = new google.maps.Marker({
+	  position: {lat: 33.437419, lng: -96.887725},
+          map: map,
+          title: 'Willow Grey Ranch'
+    });
+    marker.addListener('click', function() {
+          infowindow.open(map, marker);
     });
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
     map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
